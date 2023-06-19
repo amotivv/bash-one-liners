@@ -1,5 +1,10 @@
 # Explanation of the Bash One-Liner for Terminating Specific Processes
 
+```
+ps -ef | grep "YOUR-PROCESS-NAME" | awk -F " " {'print $2'} | 
+xargs kill -9
+```
+
 This Bash one-liner contains multiple commands combined with the use of 
 pipes (`|`). Here's the breakdown of each command:
 
